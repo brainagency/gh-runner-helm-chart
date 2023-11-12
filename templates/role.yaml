@@ -1,0 +1,30 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ .Values.Name }}
+  namespace: {{ .Values.Namespace }}
+rules:
+  - apiGroups:
+      - ""
+      - "apps"
+      - "extensions"
+      - "policy"
+      - "monitoring.coreos.com"
+    resources: 
+      - "*"
+    verbs: 
+      - "*"
+
+  - apiGroups:
+      - "networking.k8s.io"
+    resources:
+      - "*"
+    verbs:
+      - "*"
+
+  - apiGroups:
+      - "helm.toolkit.fluxcd.io"
+    resources: 
+      - "helmreleases"
+    verbs: 
+      - "*"

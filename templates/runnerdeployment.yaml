@@ -1,0 +1,36 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: {{ .Values.Name }}
+  namespace: {{ .Values.Namespace }}
+spec:
+  {{- with .Values.runnerDeployment.replicas }}
+  replicas:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+  template:
+    spec:
+      {{- with .Values.runnerDeployment.repository }}
+      repository:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.runnerDeployment.labels }}
+      labels:
+        {{- toYaml . | nindent 8}}
+      {{- end }}
+      tolerations:
+        - key: project
+          operator: Equal
+          value: system
+          effect: NoSchedule
+        - key: role
+          operator: Equal
+          value: system
+          effect: NoSchedule
+
+      nodeSelector:
+        project: system
+
+      image: {{ .Values.image }}
+      dockerdWithinRunnerContainer: false
+      serviceAccountName: {{ .Values.Name }}
