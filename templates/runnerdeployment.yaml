@@ -16,7 +16,7 @@ spec:
       {{- end }}
       {{- with .Values.runnerDeployment.labels }}
       labels:
-        {{- toYaml . | nindent 8}}
+        {{- toYaml . | nindent 8 }}
       {{- end }}
       tolerations:
         - key: project

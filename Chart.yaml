@@ -1,9 +1,9 @@
 apiVersion: v2
 name: github-runner
 description: A Helm chart for github-runner
-home: https://github.com/brainagency/#########
+home: https://github.com/brainagency/gh-runner-helm-chart
 sources:
-  - https://github.com/brainagency/###########
+  - https://github.com/brainagency/gh-runner-helm-chart
 type: application
 keywords:
   - github-runner
