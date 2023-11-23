@@ -17,7 +17,16 @@ image: summerwind/actions-runner-dind:v2.301.1-ubuntu-22.04
 
 runnerDeployment:
   replicas: 1
+
+  # org-level
+  organization: ""
+  group: ""
+  APICredentials:
+    enabled: false
+
+  # repository level
   repository: ""
+
   labels:
     - stg
     - non-prod
