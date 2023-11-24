@@ -1,8 +1,0 @@
----
-commitizen:
-  bump_message: "chore(release): v$current_version \u2192 v$new_version [skip ci]"
-  name: cz_conventional_commits
-  tag_format: v$version
-  version: 1.1.0
-  version_files:
-  - Chart.yaml:version
