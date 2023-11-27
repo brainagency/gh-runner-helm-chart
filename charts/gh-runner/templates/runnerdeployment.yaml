@@ -1,8 +1,8 @@
 apiVersion: actions.summerwind.dev/v1alpha1
 kind: RunnerDeployment
 metadata:
-  name: {{ .Values.Name }}
-  namespace: {{ .Values.Namespace }}
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
 spec:
   {{- with .Values.runnerDeployment.replicas }}
   replicas:
@@ -35,7 +35,7 @@ spec:
 
       image: {{ .Values.image }}
       dockerdWithinRunnerContainer: false
-      serviceAccountName: {{ .Values.Name }}
+      serviceAccountName: {{ .Release.Name }}
 
       {{- with .Values.runnerDeployment.organization }}
       organization:
