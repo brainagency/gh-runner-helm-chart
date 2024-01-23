@@ -28,3 +28,10 @@ rules:
       - "helmreleases"
     verbs: 
       - "*"
+
+  - apiGroups:
+      - "keda.sh"
+    resources: 
+      - "scaledobjects"
+    verbs: 
+      - "*"
