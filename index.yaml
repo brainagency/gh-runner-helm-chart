@@ -3,6 +3,21 @@ entries:
   github-runner:
   - apiVersion: v2
     appVersion: v1.0.0
+    created: "2024-07-30T14:30:29.551378102Z"
+    description: A Helm chart for github-runner
+    digest: 9e7732d05692231b1fb1bc8cea451e7aa4d56099094ffe72d11462007378906e
+    home: https://github.com/brainagency/gh-runner-helm-chart
+    keywords:
+    - github-runner
+    name: github-runner
+    sources:
+    - https://github.com/brainagency/gh-runner-helm-chart
+    type: application
+    urls:
+    - https://github.com/brainagency/gh-runner-helm-chart/releases/download/github-runner-v1.2.1/github-runner-v1.2.1.tgz
+    version: v1.2.1
+  - apiVersion: v2
+    appVersion: v1.0.0
     created: "2024-01-23T09:51:04.781936219Z"
     description: A Helm chart for github-runner
     digest: 482ded77b5ea0700697c726e3d69ddbb42e8ff12f7185d9196fa3e5c00e6c5bc
@@ -46,4 +61,4 @@ entries:
     urls:
     - https://github.com/brainagency/gh-runner-helm-chart/releases/download/github-runner-v1.1.3/github-runner-v1.1.3.tgz
     version: v1.1.3
-generated: "2024-01-23T09:51:04.781952159Z"
+generated: "2024-07-30T14:30:29.551394843Z"
