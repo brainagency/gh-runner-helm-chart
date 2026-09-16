@@ -11,9 +11,10 @@ rules:
       - "policy"
       - "monitoring.coreos.com"
       - "autoscaling"
-    resources: 
+      - "batch"
+    resources:
       - "*"
-    verbs: 
+    verbs:
       - "*"
 
   - apiGroups:
